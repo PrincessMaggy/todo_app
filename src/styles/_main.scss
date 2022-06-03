@@ -1,0 +1,36 @@
+.header {
+    background-image: var(--backgroundImage);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 20em;
+}
+
+.todo {
+    display: inline-flex;
+    width: 44vw;
+    margin: 4em 0 1.5em 1em;
+}
+
+input[type=text] {
+    border: 1px groove var(--lightGrayishBlue);
+    padding: 1.2em 0 1.2em 1em;
+    border-radius: 5px;
+    text-align: left;
+    width: 45vw;
+    margin: 0 0 1em 2.9em;
+    cursor: text;
+    font-weight: 700;
+    background-color: var(--background);
+}
+
+.myDIV {
+    position: relative;
+}
+
+h1 {
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-family: var(--headerFont);
+    margin-right: 76%;
+}
