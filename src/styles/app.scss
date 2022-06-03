@@ -32,4 +32,16 @@
     --backgroundImage: url(../images/bg-desktop-dark.jpg);
 }
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    cursor: pointer;
+    font-family: var(--globalFont);
+}
+
+body {
+    background-color: var(--background);
+    text-align: center;
+}
+
 @import './main';
