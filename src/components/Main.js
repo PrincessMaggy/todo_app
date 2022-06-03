@@ -5,21 +5,15 @@ import moon from '../images/icon-moon.svg';
 import sun from '../images/icon-sun.svg';
 
 
-const Main =({userInput, setUserInput, lists, setLists}) =>{
+const Main =() =>{
+
     // state effect for changing to dark or light mode
     const [source, setSource] = useState(moon);
 
-    const updateText =(e)=>{
-        setUserInput(e.target.value);
-        };
+    //state effects for inputs
+    const [userInput, setUserInput] = useState('');
+    const [lists, setLists] = useState([]);
     
-    const submitTask =(e)=>{
-        e.preventDefault();
-        setLists([...lists, {task:userInput, id:uuidv4()}])
-        setUserInput('');
-    }
-
-
     //dark and light mode
     let currentTheme= 'dark';
     const changeTheme =() => { 
@@ -33,6 +27,18 @@ const Main =({userInput, setUserInput, lists, setLists}) =>{
         currentTheme ='dark';
     }
     }
+
+    const updateText =(e)=>{
+        setUserInput(e.target.value);
+        };
+    
+    const submitTask =(e)=>{
+        e.preventDefault();
+        setLists([...lists, {task:userInput, id:uuidv4()}])
+        setUserInput('');
+    }
+
+
 
 
 return(
