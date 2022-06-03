@@ -1,6 +1,6 @@
 import React,{useState} from "react";
 import Main from "./components/Main";
-
+import './styles/app.scss'
 
 function App() {
 // states
@@ -11,8 +11,8 @@ const [lists, setLists] = useState([]);
     <div className="App">
 
      <Main
-     input={userInput}
-     setInput ={setUserInput}
+     userinput={userInput}
+     setUserInput ={setUserInput}
      lists ={lists}
      setLists= {setLists}
      />
