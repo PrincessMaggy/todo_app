@@ -19,51 +19,54 @@ const Main =({userInput, setUserInput, lists, setLists}) =>{
         setUserInput('');
     }
 
+
+    //dark and light mode
     let currentTheme= 'dark';
-    const changeTheme =() => {
-    
+    const changeTheme =() => { 
     document.body.classList.toggle('dark-mode');
     if (currentTheme==='dark'){
         setSource(sun);
-        currentTheme ='sun';
-
+        currentTheme ='light';
     }
     else {
         setSource(moon)
         currentTheme ='dark';
-
     }
     }
 
 
 return(
-    <div>
+    <div className="main">
         <div className="header">
-            <h1>TODO</h1>
-            <div><img src={source}  onClick ={changeTheme} alt="icon"/></div>
+            <div className="todo">
+                <h1>TODO</h1>
+                <div><img src={source}  onClick ={changeTheme} alt="icon"/></div>
+            </div>
         
-        <div>
-            <input 
-            type="text"
-            onChange={updateText}
-            value={userInput} />
+            <div className="myDIV">
+                <div>
+                    <input 
+                    type="text"
+                    onChange={updateText}
+                    value={userInput} />
 
-            <input 
-            value="ENTER"
-            type="submit" 
-            onClick={submitTask} />
+                    <input 
+                    value="ENTER"
+                    type="submit" 
+                    onClick={submitTask} /> 
+                </div>
 
-            <div className="task-list">
-            { lists.map(tweet =>(
-                <List 
-                setLists={setLists}
-                tweet={tweet}
-                lists ={lists} 
-                key = {tweet.id} />))}
-               </div>
+                <div className="task-list">
+                { lists.map(tweet =>(
+                    <List 
+                    setLists={setLists}
+                    tweet={tweet}
+                    lists ={lists} 
+                    key = {tweet.id} />))}
+                </div>
+            </div>
+
         </div>
-
-      </div>
     </div>
 )
 

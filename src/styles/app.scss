@@ -7,10 +7,12 @@
     --darkGrayishBlue: hsl(236, 9%, 61%);
     --veryDarkGrayishBlue: hsl(235, 19%, 35%);
     --brightBlue: hsl(220, 98%, 61%);
+    --enter: #809af7;
     /* DARK THEME */
     --veryDarkBlue: hsl(235, 21%, 11%);
     --veryDarkDesaturatedBlue: hsl(235, 24%, 19%);
     --lightGrayishBlue: hsl(234, 39%, 85%);
+    --enter2: #6d1c82;
     /* --lightGrayishBlue (hover): hsl(236, 33%, 92%); */
     --darkGrayishBlue: hsl(234, 11%, 52%);
     --veryDarkGrayishBlue: hsl(233, 14%, 35%);
@@ -28,6 +30,7 @@
     --background: var(--veryDarkGrayishBlue);
     --liColor: var(--lightGrayishBlue);
     --anchorColor: var(--lightGrayishBlue);
+    --enter: var(--enter2);
     ;
     --backgroundImage: url(../images/bg-desktop-dark.jpg);
 }
@@ -42,6 +45,13 @@
 body {
     background-color: var(--background);
     text-align: center;
+}
+
+.bottom {
+    font-size: 0.8rem;
+    a {
+        text-decoration: none;
+    }
 }
 
 @import './main';

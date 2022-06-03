@@ -18,8 +18,7 @@ const [lists, setLists] = useState([]);
      />
 
      <div className="bottom">
-       <a href="#">Drag and drop to reorder list</a>
-       <p>Challenge by Frontend Mentor. <a href="#">Coded by Maggy </a></p>
+       <p>Challenge by Frontend Mentor. <a href="https://www.github.com/PrincessMaggy">Coded by Maggy </a></p>
         </div>
     </div>
   );
