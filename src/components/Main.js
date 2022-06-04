@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React,{useState, useEffect} from "react";
 import { v4 as uuidv4 } from 'uuid';
 import List from "./List";
 import moon from '../images/icon-moon.svg';
@@ -6,6 +6,10 @@ import sun from '../images/icon-sun.svg';
 
 
 const Main =() =>{
+    //date 
+    let Today = new Date().toLocaleDateString('en-us', { weekday: 'long' });
+	let day = new Date().toLocaleDateString('en-us', { day: 'numeric' });
+	let month = new Date().toLocaleDateString('en-us', { month: 'long' });
 
     // state effect for changing to dark or light mode
     const [source, setSource] = useState(moon);
@@ -13,6 +17,18 @@ const Main =() =>{
     //state effects for inputs
     const [userInput, setUserInput] = useState('');
     const [lists, setLists] = useState([]);
+
+    // useEffect(() => {
+    //     localStorage.setItem('items', JSON.stringify(userInput));
+    //   }, [userInput]);
+
+
+    //   useEffect(() => {
+    //     const items = JSON.parse(localStorage.getItem('items'));
+    //     if (items) {
+    //      setUserInput(items);
+    //     }
+    //   }, []);
     
     //dark and light mode
     let currentTheme= 'dark';
@@ -44,11 +60,11 @@ const Main =() =>{
 return(
     <div className="main">
         <div className="header">
+          <h4 className="date"> {`${Today},`} {`${day} ${month}`}.</h4>
             <div className="todo">
                 <h1>TODO</h1>
                 <div><img src={source}  onClick ={changeTheme} alt="icon"/></div>
             </div>
-        
             <div className="myDIV">
                 <div>
                     <input 
