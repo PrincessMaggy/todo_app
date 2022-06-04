@@ -1,3 +1,5 @@
+//importing google fonts
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&family=Josefin+Sans:wght@100&display=swap');
 :root {
     /* COLORS */
     /* LIGHT THEME */
@@ -44,11 +46,11 @@
 
 body {
     background-color: var(--background);
-    text-align: center;
 }
 
 .bottom {
     font-size: 0.8rem;
+    color: var(--liColor);
     a {
         text-decoration: none;
         color: #809af7;
