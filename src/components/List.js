@@ -1,5 +1,6 @@
 import React from "react";
-
+import check from '../images/check.png';
+import bin from '../images/bin.png';
 
 const List =({setLists, tweet, lists, key}) =>{
 
@@ -7,10 +8,14 @@ const List =({setLists, tweet, lists, key}) =>{
         setLists(lists.filter((state)=> state.id !== tweet.id));
     }
 return(
-    <div className="List">
-        <button> Like</button>
-        <h3>{tweet.task} </h3>
-        <button onClick={deleteTweet}> delete</button>
+    <div>
+        <ul className="list">
+            <li>
+                <img src={check} alt="check"/>
+                <h3>{tweet.task} </h3>
+                <img src={bin} alt="bin" onClick={deleteTweet} />
+            </li>
+        </ul>
     </div>
 )
 
