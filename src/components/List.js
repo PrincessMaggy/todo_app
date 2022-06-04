@@ -2,7 +2,11 @@ import React from "react";
 import check from '../images/check.png';
 import bin from '../images/bin.png';
 
-const List =({setLists, tweet, lists, key}) =>{
+const List =({setLists, tweet, lists}) =>{
+
+    const checkList =(e)=>{
+        e.target.classList.toggle('checked');
+    }
 
     const deleteTweet = () =>{
         setLists(lists.filter((state)=> state.id !== tweet.id));
@@ -11,7 +15,7 @@ return(
     <div>
         <ul className="list">
             <li>
-                <img src={check} alt="check"/>
+                <img src={check} alt="check" onClick={checkList}/>
                 <h3>{tweet.task} </h3>
                 <img src={bin} alt="bin" onClick={deleteTweet} />
             </li>
