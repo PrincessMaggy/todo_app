@@ -37,3 +37,29 @@
     border-radius: 50%;
     padding: 0;
 }
+
+// media queries
+@media (max-width: 768px) {
+    .todo {
+        width: 70vw;
+    }
+    input[type=text] {
+        width: 70vw;
+    }
+    .list {
+        width: 93vw;
+    }
+}
+
+@media only screen and (max-width: 1000px) and (min-width:769px) {
+    .todo {
+        width: 70vw;
+    }
+    input[type=text] {
+        width: 70vw;
+        margin-right: 0;
+    }
+    .list {
+        width: 85vw;
+    }
+}
