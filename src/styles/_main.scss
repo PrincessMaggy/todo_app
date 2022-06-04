@@ -3,12 +3,13 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 20em;
+    text-align: center;
 }
 
 .todo {
     display: inline-flex;
     width: 44vw;
-    margin: 4em 0 1.5em 1em;
+    margin: 4em 0 1.5em 0;
 }
 
 input[type=text] {
@@ -16,8 +17,8 @@ input[type=text] {
     padding: 1.2em 0 1.2em 1em;
     border-radius: 5px;
     text-align: left;
-    width: 45vw;
-    margin: 0 2px 1em 2.9em;
+    width: 41.5vw;
+    margin: 0 0 1em 3em;
     cursor: text;
     font-weight: 700;
     background-color: var(--background);
@@ -46,3 +47,5 @@ h1 {
     font-family: var(--headerFont);
     margin-right: 76%;
 }
+
+@import './list';
