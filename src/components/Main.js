@@ -16,19 +16,14 @@ const Main =() =>{
 
     //state effects for inputs
     const [userInput, setUserInput] = useState('');
-    const [lists, setLists] = useState([]);
+  
+    useEffect(() => {
+        localStorage.setItem('items', JSON.stringify(lists));
+      });
 
-    // useEffect(() => {
-    //     localStorage.setItem('items', JSON.stringify(userInput));
-    //   }, [userInput]);
-
-
-    //   useEffect(() => {
-    //     const items = JSON.parse(localStorage.getItem('items'));
-    //     if (items) {
-    //      setUserInput(items);
-    //     }
-    //   }, []);
+      const saveditems = JSON.parse(localStorage.getItem('items'));
+      const [lists, setLists] = useState(saveditems || []);
+    
     
     //dark and light mode
     let currentTheme= 'dark';
@@ -70,7 +65,8 @@ return(
                     <input 
                     type="text"
                     onChange={updateText}
-                    value={userInput} />
+                    value={userInput}
+                    required />
 
                     <input 
                     value="ENTER"
