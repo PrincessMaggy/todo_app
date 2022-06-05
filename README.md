@@ -16,8 +16,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 This is webpage is a todo app that has feature of a light mode and dark mode.
 ### Screenshot
 
-![screenshot](./screenshot1.png)
-![screenshot](./screenshot2.png)
+![screenshot](./screenshot1.PNG)
+![screenshot](./screenshot2.PNG)
 
 ### Links
 
