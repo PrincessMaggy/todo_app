@@ -10,6 +10,7 @@
     --veryDarkGrayishBlue: hsl(235, 19%, 35%);
     --brightBlue: hsl(220, 98%, 61%);
     --enter: #809af7;
+    --confirm: hsl(280, 87%, 65%);
     /* DARK THEME */
     --veryDarkBlue: hsl(235, 21%, 11%);
     --veryDarkDesaturatedBlue: hsl(235, 24%, 19%);
@@ -33,6 +34,7 @@
     --liColor: var(--lightGrayishBlue);
     --anchorColor: var(--lightGrayishBlue);
     --enter: var(--enter2);
+    --confirm: darkmagenta;
     ;
     --backgroundImage: url(../images/bg-desktop-dark.jpg);
 }

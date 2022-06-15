@@ -20,9 +20,13 @@
         h3 {
             text-align: left;
             width: 80%;
+            padding-left: 1em;
         }
         img {
             width: 30px;
+            &:hover {
+                background: linear-gradient(to left, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+            }
         }
     }
 }
@@ -36,6 +40,31 @@
     width: 2em;
     border-radius: 50%;
     padding: 0;
+}
+
+.confirm {
+    display: none;
+    button {
+        border: 0.1px groove magenta;
+        background-color: var(--confirm);
+        padding: 0.8em;
+        margin-left: 1em;
+        display: block;
+        color: white;
+        border-radius: 5px;
+        font-weight: bolder;
+        &:hover {
+            transition: 0.3s ease;
+            background-color: white;
+            color: darkmagenta;
+        }
+    }
+    .cancel {
+        background-color: red;
+        &:hover {
+            color: red;
+        }
+    }
 }
 
 // media queries
