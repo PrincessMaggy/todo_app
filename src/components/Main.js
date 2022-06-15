@@ -39,14 +39,20 @@ const Main =() =>{
     }
     }
 
+    const entra =(e) =>{
+        if (e.which === 13){
+            submitTask();
+        }
+    }
+
     const updateText =(e)=>{
         setUserInput(e.target.value);
         };
     
-    const submitTask =(e)=>{
-        e.preventDefault();
+    const submitTask =()=>{
+        if (userInput !== ""){
         setLists([...lists, {task:userInput, id:uuidv4()}])
-        setUserInput('');
+        setUserInput('');}
     }
 
 
@@ -65,6 +71,7 @@ return(
                     <input 
                     type="text"
                     onChange={updateText}
+                    onKeyDown={entra}
                     value={userInput}
                     required />
 
